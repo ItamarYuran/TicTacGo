@@ -11,6 +11,7 @@ func main() {
 }
 
 func manageGame() {
+
 	board, player := initiate()
 	printBoard(board)
 
@@ -37,7 +38,6 @@ func manageGame() {
 		player = player%2 + 1
 
 	}
-	clearScreen()
 	fmt.Printf("GAME OVER\n It's a tie!\n")
 
 }
@@ -67,9 +67,7 @@ func getPlayerCell(board [3][3]string) (r, c int) {
 			continue
 		}
 		return row, column
-
 	}
-
 }
 
 func printBoard(mat [3][3]string) {
@@ -113,7 +111,6 @@ func check(mat [3][3]string) string {
 		return mat[0][2]
 	}
 	return "-"
-
 }
 
 func clearScreen() {
